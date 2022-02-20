@@ -1,6 +1,6 @@
 package Aplicacoes;
 
-import java.io.IOException;
+
 import java.util.Scanner;
 /**
  * 
@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) throws IOException, InterruptedException{
+	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
 		int questaoInformada = 0;
 		while (questaoInformada != 4) {
