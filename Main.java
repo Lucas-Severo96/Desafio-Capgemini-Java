@@ -6,14 +6,12 @@ import java.util.Scanner;
  * 
  * @author Lucas Leite Severo
  * Data: 20/02/2022
- * O programa sugere um Menu de opcoes no qual o usuario escolhe uma opcao (1, 2 e 3 são referente as Questoes do desafio) 
- * ou pode optar por sair do Menu (4).
  *
  */
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException, InterruptedException{
 		Scanner entrada = new Scanner(System.in);
 		int questaoInformada = 0;
 		while (questaoInformada != 4) {
@@ -35,7 +33,10 @@ public class Main {
 				 * Metodo que imprime no console um triangulo de asteriscos alinhados a direita
 				 * e recebe um numero inteiro como parametro
 				 */
-				MetodosDesafio.trianguloDeAsteriscos(5);
+				System.out.println("Informe um numero inteiro positivo para formar o triangulo de asteriscos:");
+				int numeroDeAsteriscos = entrada.nextInt();
+				
+				MetodosDesafio.trianguloDeAsteriscos(numeroDeAsteriscos);
 				System.out.println();
 				break;
 				
@@ -55,12 +56,14 @@ public class Main {
 				 * Metodo que conta e retorna a quantidade de anagramas (substrings) derivados
 				 * de uma String informada
 				 */
-				System.out.println(MetodosDesafio.countPairsAnagrams("ovo"));
+				System.out.println("Informe a palavra (String) que sera analisada: ");
+				String palavra = entrada.next();
+				System.out.println(MetodosDesafio.countPairsAnagrams(palavra));
 				break;
 				
 			case 4:
-				System.out.println("Saindo do Menu... Até Logo!");
-		        	break;
+				System.out.println("Saindo do Menu... At� Logo!");
+		        break;
 
 			default:
 				System.out.println("Opcao Invalida!\n");

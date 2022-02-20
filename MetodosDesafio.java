@@ -4,12 +4,12 @@ import java.util.Arrays;
 
 public class MetodosDesafio {
 
-	public static void trianguloDeAsteriscos(int numeroAsteriscos) {
+	public static void trianguloDeAsteriscos(int numeroDeAsteriscos) {
 
 		int i, j = 0;
 
-		for (i = 1; i <= numeroAsteriscos; i++) {
-			for (j = numeroAsteriscos - i; j >= 1; j--) {
+		for (i = 1; i <= numeroDeAsteriscos; i++) {
+			for (j = numeroDeAsteriscos - i; j >= 1; j--) {
 				System.out.print(" ");
 			}
 			for (j = 1; j <= i; j++) {
@@ -115,9 +115,6 @@ public class MetodosDesafio {
 					}
 					String pair2 = new String(pairsK);
 
-					// TODO: REMOVER COMENTARIO ABAIXO
-					// System.out.println("comparando: [" + pair1 +":"+ pair2 +"]");
-
 					if (isAnagram(pair1, pair2)) {
 						count++;
 					}
@@ -157,20 +154,4 @@ public class MetodosDesafio {
 		return sc1.equals(sc2);
 	}
 	
-	public final static void clearConsole(){
-
-        try{
-            final String os = System.getProperty("os.name");
-
-            if (os.contains("Windows")){
-                Runtime.getRuntime().exec("cls");
-
-            }else{
-                Runtime.getRuntime().exec("clear");
-            }
-        }
-        catch (final Exception e){
-        
-        }
-    }
 }
