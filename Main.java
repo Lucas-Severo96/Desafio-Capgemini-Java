@@ -6,12 +6,14 @@ import java.util.Scanner;
  * 
  * @author Lucas Leite Severo
  * Data: 20/02/2022
+ * O programa sugere um Menu de opcoes no qual o usuario escolhe uma opcao (1, 2 e 3 são referente as Questoes do desafio) 
+ * ou pode optar por sair do Menu (4).
  *
  */
 
 public class Main {
 
-	public static void main(String[] args) throws IOException, InterruptedException{
+	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
 		int questaoInformada = 0;
 		while (questaoInformada != 4) {
@@ -57,8 +59,8 @@ public class Main {
 				break;
 				
 			case 4:
-				System.out.println("Saindo do Menu... At� Logo!");
-		        break;
+				System.out.println("Saindo do Menu... Até Logo!");
+		        	break;
 
 			default:
 				System.out.println("Opcao Invalida!\n");
